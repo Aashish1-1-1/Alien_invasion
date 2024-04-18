@@ -56,9 +56,9 @@ class AleinInvasion:
 
 
     def _check_keydown_event(self,event):
-        if event.key == pygame.K_RIGHT:
+        if (event.key == pygame.K_RIGHT or event.key == pygame.K_l):
             self.ship.moving_right = True
-        elif event.key == pygame.K_LEFT:
+        elif (event.key == pygame.K_LEFT or event.key == pygame.K_j):
             self.ship.moving_left = True
         elif event.key == pygame.K_q:
             sys.exit()
@@ -70,9 +70,9 @@ class AleinInvasion:
             
 
     def _check_keyup_event(self,event):
-        if event.key == pygame.K_RIGHT:
+        if (event.key == pygame.K_RIGHT or event.key == pygame.K_l):
             self.ship.moving_right = False
-        elif event.key == pygame.K_LEFT:
+        elif (event.key == pygame.K_LEFT or event.key == pygame.K_j):
             self.ship.moving_left = False
 
 
